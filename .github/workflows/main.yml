@@ -20,6 +20,10 @@ jobs:
     # Publishes Blazor project to the release-folder
     - name: Publish .NET Project
       run: dotnet publish TournamentsApp.csproj -c Release -o release --nologo
+      
+    # changes the base-tag in index.html from '/' to 'TournamentsApp' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to TournamentsApp
+      run: sed -i 's/<base href="\/" \/>/<base href="\/TournamentsApp\/" \/>/g' release/wwwroot/index.html
     
     # Generate Documentation or Static Site and publish to Github Pages
     - name: Commit wwwroot to GitHub Pages
