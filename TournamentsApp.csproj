@@ -5,6 +5,14 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+
+		<BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+		<BlazorWebAssemblyPreserveCollationData>false</BlazorWebAssemblyPreserveCollationData>
+		<PublishTrimmed>true</PublishTrimmed>
+		<BlazorEnableCompression>true</BlazorEnableCompression>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<TrimMode>link</TrimMode>
+		<!--<RunAOTCompilation>true</RunAOTCompilation>-->
 	</PropertyGroup>
 
 	<ItemGroup>
